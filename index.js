@@ -7,6 +7,7 @@ function nowServing(katzDeliLine){
     return `There is nobody waiting to be served!`
   }else{
     let first = katzDeliLine[0]
-    katzDeliLine.unshift(katzDeliLine[0])
+    katzDeliLine.shift(katzDeliLine[0])
+    return first
   }
 }
