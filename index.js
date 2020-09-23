@@ -1,11 +1,12 @@
 function takeANumber(katzDeliLine, name){
-  return  `Welcome, ${name}. You are ${katzDeliLine.length - 1} in line.`
+  return  `Welcome, ${name}. You are ${katzDeliLine.length} in line.`
 }
 
 function nowServing(katzDeliLine){
   if(katzDeliLine.length === 0){
     return `There is nobody waiting to be served!`
   }else{
-    return katzDeliLine[0]
+    let first = katzDeliLine[0]
+    katzDeliLine.unshift(katzDeliLine[0])
   }
 }
